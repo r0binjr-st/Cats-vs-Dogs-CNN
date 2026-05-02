@@ -1,16 +1,36 @@
-Binary image classifier using PyTorch.
+# Cats vs Dogs CNN (PyTorch)
 
-## Pipeline
-- load data from Google Drive  
-- preprocess images (resize, normalize)  
-- train CNN  
-- evaluate (loss, accuracy)
+Simple CNN for binary image classification (cats vs dogs).
+
+## Results
+
+* Validation Accuracy: ~90%
 
 ## Model
-Conv → ReLU → Pool ×3 → FC
 
-## Result
-Accuracy ~80–90%
+* 3 Conv blocks (Conv → ReLU → MaxPool)
+* Fully connected layer
+
+## Dataset
+
+* Kaggle Cats vs Dogs
+* Loaded from Google Drive
+* Classes: `Cat`, `Dog`
 
 ## Run
-Execute all cells in order.
+
+```bash
+pip install -r requirements.txt
+```
+
+Open `cats_dogs.ipynb` in Google Colab and run all cells.
+
+## File
+
+* `cats_dogs.ipynb` — main notebook
+
+## Improvements
+
+* data augmentation
+* deeper CNN
+* pretrained models (ResNet, MobileNet)
